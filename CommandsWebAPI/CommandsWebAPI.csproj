@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include=".api\Controllers\CommandsController.cs" />
+    <Compile Include=".bll\Data\CommanderContext.cs" />
+    <Compile Include=".bll\Data\ICommanderRepo.cs" />
+    <Compile Include=".bll\Data\SqlCommanderRepo.cs" />
+    <Compile Include=".bll\Dtos\CommandCreateDto.cs" />
+    <Compile Include=".bll\Dtos\CommandDto.cs" />
+    <Compile Include=".bll\Dtos\CommandReadDto.cs" />
+    <Compile Include=".bll\Dtos\CommandUpdateDto.cs" />
+    <Compile Include=".dal\Migrations\20201008101331_InitialMigration.cs" />
+    <Compile Include=".dal\Migrations\20201008101331_InitialMigration.Designer.cs" />
+    <Compile Include=".dal\Migrations\CommanderContextModelSnapshot.cs" />
+    <Compile Include=".dal\Models\Command.cs" />
+    <Compile Include=".dal\Profiles\CommandsProfile.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include=".dal\Models\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.JsonPatch" Version="3.1.8" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.8" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+
+
+</Project>
