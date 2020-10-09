@@ -6,9 +6,9 @@
 
   <ItemGroup>
     <Compile Include=".api\Controllers\CommandsController.cs" />
-    <Compile Include=".bll\Data\CommanderContext.cs" />
-    <Compile Include=".bll\Data\ICommanderRepo.cs" />
-    <Compile Include=".bll\Data\SqlCommanderRepo.cs" />
+    <Compile Include=".dal\CommanderContext.cs" />
+    <Compile Include=".bll\Services\ICommanderRepo.cs" />
+    <Compile Include=".bll\Services\SqlCommanderRepo.cs" />
     <Compile Include=".bll\Dtos\CommandCreateDto.cs" />
     <Compile Include=".bll\Dtos\CommandDto.cs" />
     <Compile Include=".bll\Dtos\CommandReadDto.cs" />
@@ -16,12 +16,12 @@
     <Compile Include=".dal\Migrations\20201008101331_InitialMigration.cs" />
     <Compile Include=".dal\Migrations\20201008101331_InitialMigration.Designer.cs" />
     <Compile Include=".dal\Migrations\CommanderContextModelSnapshot.cs" />
-    <Compile Include=".dal\Models\Command.cs" />
-    <Compile Include=".dal\Profiles\CommandsProfile.cs" />
+    <Compile Include=".dal\Entities\Command.cs" />
+    <Compile Include=".bll\Mapping\CommandsProfile.cs" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include=".dal\Models\" />
+    <Folder Include=".dal\Entities\" />
   </ItemGroup>
 
   <ItemGroup>
