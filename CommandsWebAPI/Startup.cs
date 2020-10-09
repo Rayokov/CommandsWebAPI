@@ -38,10 +38,11 @@ namespace Commander
                 s.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
             });
 
+            //mapping to our databse
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-            
-             services.AddScoped<ICommanderRepo, SqlCommanderRepo>();
+            services.AddScoped<ICommanderRepo, SqlCommanderRepo>();
 
+            //swagger
             services.AddSwaggerGen(x =>
             {
                 x.SwaggerDoc("v1", new OpenApiInfo { Title = "CommandsAPI", Version = "v1" });
@@ -56,6 +57,7 @@ namespace Commander
                 app.UseDeveloperExceptionPage();
             }
 
+            //using swagger
             var swaggerOptions = new SwaggerOptions();
             Configuration.GetSection(nameof(SwaggerOptions)).Bind(swaggerOptions);
             app.UseSwagger(option =>
@@ -66,10 +68,10 @@ namespace Commander
             {
                 option.SwaggerEndpoint(swaggerOptions.UIEndpoint, swaggerOptions.Description);
             });
+
+
             app.UseHttpsRedirection();
-
             app.UseRouting();
-
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
