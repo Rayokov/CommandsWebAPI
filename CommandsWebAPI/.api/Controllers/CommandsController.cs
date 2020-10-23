@@ -5,6 +5,7 @@ using Commander.Dtos;
 using Commander.Models;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 
 namespace Commander.Controllers   
 {
@@ -14,11 +15,13 @@ namespace Commander.Controllers
     {
         private readonly ICommanderRepo _repository;
         private readonly IMapper _mapper;
+        private readonly ILogger _logger;
 
-        public CommandsController(ICommanderRepo repository, IMapper mapper)
+        public CommandsController(ICommanderRepo repository, IMapper mapper, ILogger logger)
         {
             _repository = repository;
             _mapper = mapper;
+            _logger = logger;
         }
 
         //GET api/commands
@@ -26,7 +29,6 @@ namespace Commander.Controllers
         public ActionResult <IEnumerable<CommandReadDto>> GetAllCommands()
         {
             var commandItems = _repository.GetAllCommands();
-
             return Ok(_mapper.Map<IEnumerable<CommandReadDto>>(commandItems));
         }
 

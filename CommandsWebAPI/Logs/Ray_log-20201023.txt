@@ -1,0 +1,6 @@
+2020-10-23T16:51:03.9380356+03:00  [INF] Now listening on: "https://localhost:5001" (d826f4b8)
+2020-10-23T16:51:03.9489987+03:00  [INF] Now listening on: "http://localhost:5000" (d826f4b8)
+2020-10-23T16:51:03.9531344+03:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-10-23T16:51:03.9564221+03:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-10-23T16:51:03.9599609+03:00  [INF] Content root path: "E:\Visual Studio\CommandsWebAPI\CommandsWebAPI" (b5d60022)
+2020-10-23T16:51:28.9768788+03:00  [INF] Application is shutting down... (90f52c38)
